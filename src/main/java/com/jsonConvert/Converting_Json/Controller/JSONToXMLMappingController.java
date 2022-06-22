@@ -4,7 +4,7 @@ package com.jsonConvert.Converting_Json.Controller;
 import com.github.underscore.U;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.jsonConvert.Converting_Json.Model.Jsoobj;
+import com.jsonConvert.Converting_Json.Model.Attributes;
 import com.jsonConvert.Converting_Json.Model.RequestModel;
 import org.springframework.http.MediaType;
 import org.json.XML;
@@ -74,12 +74,12 @@ public class JSONToXMLMappingController {
 //        return jsonString;
     }
     @PostMapping(path = "/GsonObject")
-    public RequestModel gson1(@RequestBody Jsoobj jhghfg){
+    public RequestModel gson1(@RequestBody Attributes name){
         GsonBuilder builder = new GsonBuilder();
         builder.setPrettyPrinting();
 
         Gson gson = builder.create();
-        String fdg = jhghfg.getDfrg();
+        String fdg = name.getName();
         RequestModel student = gson.fromJson(fdg,RequestModel.class);
         return student;
     }

@@ -5,6 +5,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Jsoobj {
-    String dfrg;
+public class Attributes {
+    String name;
 }
